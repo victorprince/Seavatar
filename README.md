@@ -1,4 +1,4 @@
-[![codecov](https://codecov.io/gh/victorprince/Seavatar/branch/main/graph/badge.svg?token=TMC3PGPGIQ)](https://codecov.io/gh/victorprince/Seavatar)
+
 # Seavatar
 
 Seavatar is a python library which generates beach-MLH themed avatars
