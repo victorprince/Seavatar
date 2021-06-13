@@ -1,6 +1,7 @@
+"""Tool To Generate Beach themed -MLH avatars"""
+__version__ = "0.1.0"
 from hashlib import sha256
 import re
-import argparse
 def avoid_dup(i,final,avcolor):
 	current=''
 	if(i<len(avcolor)):
@@ -23,7 +24,11 @@ def generate_seavatar(string,filename='seavatar.svg'):
 			hashed_string+=str(ord(i))
 		else:
 			hashed_string+=i
-	av_string=hashed_string[0:16]	
+	
+	
+	av_string=hashed_string[0:16]
+	
+	
 	#P2:Defining SVG
 	svg_header='<?xml version="1.0" encoding="UTF-8" standalone="no"?><!-- Created by Victor --><svg  xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 559.369 793.6992">'
 	svg_circle='<path id="circle" d=" M 275.4473,154.4572 C 154.8788,154.4572 56.2319,253.1041 56.2319,373.6726 56.2319,494.241 154.8788,592.8879 275.4473,592.8879 396.0157,592.8879 494.6627,494.241 494.6627,373.6726 494.6627,253.1041 396.0157,154.4572 275.4473,154.4572 Z" style="fill:#here;fill-opacity:1;stroke:#000000;stroke-width:5;stroke-opacity:1;stroke-linecap:round;stroke-miterlimit:4;stroke-dashoffset:0;"/>'
@@ -134,15 +139,4 @@ def generate_seavatar(string,filename='seavatar.svg'):
 	f=open(filename,'w')
 	f.write(final_svg)
 	return (final_svg)
-par_ob=argparse.ArgumentParser(description="A tool which generates unique MLH-beach-avatars for a string ")
-par_ob.add_argument('-fn',default='seavatar.svg',help="Name of the output SVG file")
-par_ob.add_argument('-s',required=True,help="The string to generate the seavatar")
-par_ob.add_argument('-p',default='n',help="if set to y will print the SVG as text")
-args=par_ob.parse_args()
-st=args.s
-fn=args.fn
-p=args.p
-if(p=='y'):
-	print(generate_seavatar(st,fn))
-else:
-	generate_seavatar(st,fn)
+
