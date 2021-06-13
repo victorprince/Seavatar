@@ -3,6 +3,7 @@
 
 Seavatar is a python library which generates beach-MLH themed avatars
 
+![alt text](https://svgshare.com/i/Y5M.svg)
 ## Installation
 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install Seavatar
