@@ -1,4 +1,4 @@
-#Sample-Seavatars
+# Sample-Seavatars
 ```python
 import seavatar
 seavatar.generate_seavatar("mlh","mlh.svg")
